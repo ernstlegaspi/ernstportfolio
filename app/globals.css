@@ -21,8 +21,12 @@ h1, h2, .socials-color {
 	color: #F29F3E;
 }
 
+.orange-border {
+	border: 1px solid #F29F3E
+}
+
 .main-bg {
-	background: url(../img/bg.jpg) no-repeat 100% 0%;
+	background: url(../img/bg.webp) no-repeat 100% 0%;
 	background-size: cover;
 	height: auto;
 	padding-bottom: 50px;
@@ -35,8 +39,13 @@ h1, h2, .socials-color {
 	display: -ms-flexbox;
 	display: flex;
 	-webkit-box-pack: center;
-		 -ms-flex-pack: center;
-			  justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+}
+
+.me {
+	width: 200px;
+	height: 200px;
 }
 
 .main-bg .header .header-intro p:first-child {
@@ -56,8 +65,6 @@ h1, h2, .socials-color {
 	display: flex;
 	align-items: center;
 }
-
-
 
 .main-bg .header .header-intro a:not(:last-child) {
 	margin-right: 5px;
@@ -135,48 +142,11 @@ h1, h2, .socials-color {
 	margin-bottom: 30px;
 }
 
-.main-bg .stacks .s-row {
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-pack: center;
-	-ms-flex-pack: center;
-	justify-content: center;
-}
-
-.main-bg .stacks .s-row:not(:last-child) {
-	margin-bottom: 15px;
-}
-
-.main-bg .stacks .s-row .stack {
-	border: 1px solid #F29F3E;
-	border-radius: 50px;
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-pack: center;
-	-ms-flex-pack: center;
-	justify-content: center;
-	align-items: center;
-	padding: 10px 0;
-	width: 170px;
-}
-
-.main-bg .stacks .s-row .stack:not(:last-child) {
-	margin-right: 15px;
-}
-
-.main-bg .stacks .s-row .stack p {
-	color: #1a1a1a;
-	margin-left: 5px;
-}
-
 .main-bg .education h2 {
 	margin: 30px 0;
 }
 
 .school-image {
-	border: 1px solid #F29F3E;
 	border-radius: 100%;
 	padding: 5px;
 	margin-bottom: 5px;
@@ -239,24 +209,7 @@ h1, h2, .socials-color {
 	.main-bg .stacks h2 {
 	  margin: 15px 0;
 	}
-	.main-bg .stacks .s-row {
-	  -webkit-box-orient: vertical;
-	  -webkit-box-direction: normal;
-			-ms-flex-direction: column;
-				 flex-direction: column;
-	  -webkit-box-align: center;
-			-ms-flex-align: center;
-				 align-items: center;
-	}
-	.main-bg .stacks .s-row:not(:last-child) {
-	  margin-bottom: 0;
-	}
-	.main-bg .stacks .s-row .stack {
-	  margin-bottom: 15px;
-	}
-	.main-bg .stacks .s-row .stack:not(:last-child) {
-	  margin-right: 0;
-	}
+	
 	.main-bg .education {
 	  text-align: center;
 	}
@@ -269,29 +222,31 @@ h1, h2, .socials-color {
 	.main-bg .projects {
 	  text-align: center;
 	}
+
 	.main-bg .projects .p-row {
-	  -webkit-box-pack: center;
-			-ms-flex-pack: center;
-				 justify-content: center;
-	  -webkit-box-orient: vertical;
-	  -webkit-box-direction: normal;
-			-ms-flex-direction: column;
-				 flex-direction: column;
-	  -webkit-box-align: center;
-			-ms-flex-align: center;
-				 align-items: center;
+		-webkit-box-pack: center;
+		-ms-flex-pack: center;
+		justify-content: center;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: column;
+		flex-direction: column;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		align-items: center;
 	}
+
 	.main-bg .projects .p-row .project {
-	  height: auto;
-	  margin-bottom: 30px;
-	  width: 100%;
+		height: auto;
+		margin-bottom: 30px;
+		width: 100%;
 	}
 }
 
 @media only screen and (max-width: 480px) {
 	.main-bg .header .header-image img {
-	  width: 200px;
-	  height: 150px;
+		width: 200px;
+		height: 150px;
 	}
 }
 

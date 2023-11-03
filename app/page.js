@@ -6,41 +6,50 @@ import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai'
 import { HiMail } from 'react-icons/hi'
 import Image from 'next/image'
 
-import me from '../img/me.jpg'
-import twitterProject from '../img/twitterclone.png'
+import me from '../img/me.webp'
+import twitterProject from '../img/twitterclone.webp'
 
-import axios from '../img/axios.png'
-import css from '../img/css.png'
-import html from '../img/html.png'
-import django from '../img/django.png'
-import express from '../img/express.png'
-import git from '../img/git.png'
-import graphql from '../img/graphql.png'
-import mongodb from '../img/mongodb.png'
-import mongoose from '../img/mongoose.png'
-import mysql from '../img/mysql.png'
-import nextjs from '../img/next.png'
-import nodejs from '../img/nodejs.png'
-import prisma from '../img/prisma.png'
-import python from '../img/python.png'
-import reactjs from '../img/reactjs.png'
-import reactquery from '../img/reactquery.png'
-import redux from '../img/redux.png'
-import tailwind from '../img/tailwind.png'
-import typescript from '../img/typescript.png'
+import axios from '../img/axios.webp'
+import css from '../img/css.webp'
+import django from '../img/django.webp'
+import express from '../img/express.webp'
+import git from '../img/git.webp'
+import graphql from '../img/graphql.webp'
+import html from '../img/html.webp'
+import mongodb from '../img/mongodb.webp'
+import mongoose from '../img/mongoose.webp'
+import mysql from '../img/mysql.webp'
+import nextjs from '../img/next.webp'
+import nodejs from '../img/nodejs.webp'
+import prisma from '../img/prisma.webp'
+import python from '../img/python.webp'
+import reactjs from '../img/reactjs.webp'
+import reactquery from '../img/reactquery.webp'
+import redux from '../img/redux.webp'
+import tailwind from '../img/tailwind.webp'
+import typescript from '../img/typescript.webp'
 import zustand from '../img/zustand.webp'
 
-import AMA from '../img/ama.png'
-import dict from '../img/dict.png'
-import tup from '../img/tup.png'
+import AMA from '../img/ama.webp'
+import dict from '../img/dict.webp'
+import tup from '../img/tup.webp'
 
 // const TwitterClone = lazy(() => import('./twitter-clone/twitter-clone'))
 
 export default function Home() {
 	const [showTwitterClone, setShowTwitterClone] = useState(false)
 
-	const educationCard = (img, schoolName, schoolCourse, dateAttended) => <div className="flex flex-col items-center max-[850px]:mb-5">
-		<Image className="school-image" src={img} width={100} height={100} />
+	const Stack = ({ children }) => <div className="flex justify-center mb-3 max-[850px]:flex-col max-[850px]:items-center max-[850px]:mb-0">
+		{children}
+	</div>
+	
+	const Skills = ({ img, width = 20, height = 20, text, isSize15, alt }) => <div className="py-1 mr-3 orange-border rounded-full flex justify-center items-center w-[170px] px-[10px] max-[850px]:mb-5">
+		<Image alt={alt} src={img} width={isSize15 ? 15 : width} height={isSize15 ? 15 : height} />
+		<p className="ml-1">{text}</p>
+	</div>
+	
+	const educationCard = (img, schoolName, schoolCourse, dateAttended, alt) => <div className="flex flex-col items-center max-[850px]:mb-5">
+		<Image alt={alt} className="orange-border school-image" src={img} width={100} height={100} />
 		<p className="w-[80%] mx-auto">{schoolName}</p>
 		<p className="school-course">{schoolCourse}</p>
 		<p className="date">{dateAttended}</p>
@@ -57,19 +66,19 @@ export default function Home() {
 							<p>Good day, I am Ernst Legaspi. I have 3 years personal experience and 1 year of work experience in web development using different full stack technologies, I am eager to contribute my skills to your dynamic team and assist in developing cutting-edge applications.</p>
 							<div className="flex items-center socials-color mt-1 max-[850px]:w-full max-[850px]:justify-center">
 								<a href="https://www.linkedin.com/in/er
-								nst-danielle-legaspi-259547170/" target="_blank" rel="noreferrer"><AiFillGithub size={20} /></a>
-								<a href="https://github.com/ernstlegaspi" target="_blank" rel="noreferrer"><AiFillLinkedin size={20} /></a>
-								<a href="mailto:legapsiernstdanielle@gmail.com"><HiMail size={24} /></a>
+								nst-danielle-legaspi-259547170/" target="_blank" rel="noreferrer"><AiFillGithub className="text-[20px] max-[850px]:text-[40px]" /></a>
+								<a href="https://github.com/ernstlegaspi" target="_blank" rel="noreferrer"><AiFillLinkedin className="text-[20px] max-[850px]:text-[40px]" /></a>
+								<a href="mailto:legapsiernstdanielle@gmail.com"><HiMail className="text-[25px] max-[850px]:text-[45px]" /></a>
 							</div>
 						</div>
-						<Image src={me} alt="Ernst Legaspi" width={200} height={200} />
+						<Image src={me} alt="Ernst Legaspi" className="me" />
 					</div>
 					<div className="projects">
 						<h2>Recent Projects</h2>
 						<div className="p-row">
 							<div onClick={() => {}} className="project">
 							{/* <div onClick={() => setShowTwitterClone(true)} className="project"> */}
-								<Image className="project-image" alt="Twitter Clone Project" src={twitterProject} />
+								<Image className="project-image" alt="Twitter Clone Project" src={twitterProject} priority />
 								<div className="overlay">
 									<p>View project</p>
 								</div>
@@ -79,103 +88,43 @@ export default function Home() {
 					<div className="stacks">
 						<h2>Stacks I know</h2>
 						<p className="s-sub-title">Programming Languages / Databases / Others</p>
-						<div className="s-row">
-							<div className="stack">
-								<Image src={reactjs} width={20} height={20} />
-								<p>React.js</p>
-							</div>
-							<div className="stack">
-								<Image src={nodejs} width={25} height={25} />
-								<p>Node.js</p>
-							</div>
-							<div className="stack">
-								<Image src={express} width={20} height={20} />
-								<p>Express.js</p>
-							</div>
-							<div className="stack">
-								<Image src={nextjs} width={20} height={20} />
-								<p>Next.js</p>
-							</div>
-						</div>
-						<div className="s-row">
-							<div className="stack">
-								<Image src={mongodb} width={20} height={20} />
-								<p>MongoDB</p>
-							</div>
-							<div className="stack">
-								<Image src={mysql} width={40} height={20} />
-								<p>MySQL</p>
-							</div>
-							<div className="stack">
-								<Image src={python} width={15} height={15} />
-								<p>Python</p>
-							</div>
-							<div className="stack">
-								<Image src={django} width={15} height={15} />
-								<p>Django</p>
-							</div>
-						</div>
-						<div className="s-row">
-							<div className="stack">
-								<Image src={reactquery} width={15} height={15} />
-								<p>React Query</p>
-							</div>
-							<div className="stack">
-								<Image src={zustand} width={50} height={20} />
-								<p>Zustand</p>
-							</div>
-							<div className="stack">
-								<Image src={axios} width={20} height={20} />
-								<p>Axios</p>
-							</div>
-							<div className="stack">
-								<Image src={redux} width={20} height={20} />
-								<p>Redux</p>
-							</div>
-						</div>
-						<div className="s-row">
-							<div className="stack">
-								<Image src={html} width={15} height={15} />
-								<p>HTML</p>
-							</div>
-							<div className="stack">
-								<Image src={css} width={20} height={20} />
-								<p>CSS</p>
-							</div>
-							<div className="stack">
-								<Image src={tailwind} width={30} height={15} />
-								<p>TailwindCSS</p>
-							</div>
-							<div className="stack">
-								<Image src={typescript} width={15} height={15} />
-								<p>Typescript</p>
-							</div>
-						</div>
-						<div className="s-row">
-							<div className="stack">
-								<Image src={graphql} width={15} height={15} />
-								<p>GraphQL</p>
-							</div>
-							<div className="stack">
-								<Image src={prisma} width={20} height={20} />
-								<p>Prisma</p>
-							</div>
-							<div className="stack">
-								<Image src={mongoose} width={50} height={20} />
-								<p>Mongoose</p>
-							</div>
-							<div className="stack">
-								<Image src={git} width={15} height={15} />
-								<p>Git</p>
-							</div>
-						</div>
+						<Stack>
+							<Skills alt="React.js Icon" img={reactjs} text="React.js" />
+							<Skills alt="Node.js Icon" img={nodejs} text="Node.js" width={25} height={25} />
+							<Skills alt="Express.js Icon" img={express} text="Express.js" />
+							<Skills alt="Next.js Icon" img={nextjs} text="Next.js" />
+						</Stack>
+						<Stack>
+							<Skills alt="MongoDB Icon" img={mongodb} text="MongoDB" />
+							<Skills alt="MySQL Icon" img={mysql} text="MySQL" width={40} />
+							<Skills alt="Python Icon" img={python} text="Python" isSize15 />
+							<Skills alt="Django Icon" img={django} text="Django" isSize15 />
+						</Stack>
+						<Stack>
+							<Skills alt="React Query Icon" img={reactquery} text="React Query" isSize15 />
+							<Skills alt="Zustand Icon" img={zustand} text="Zustand" width={50} />
+							<Skills alt="Axios Icon" img={axios} text="Axios" />
+							<Skills alt="Redux Icon" img={redux} text="Redux" />
+						</Stack>
+						<Stack>
+							<Skills alt="HTML Icon" img={html} text="HTML" isSize15 />
+							<Skills alt="CSS Icon" img={css} text="CSS" />
+							<Skills alt="TailwindCSS Icon" img={tailwind} text="TailwindCSS" width={30} height={15} />
+							<Skills alt="Typescript Icon" img={typescript} text="Typescript" isSize15 />
+						</Stack>
+						<Stack>
+							<Skills alt="GraphQL Icon" img={graphql} text="GraphQL" isSize15 />
+							<Skills alt="Prisma Icon" img={prisma} text="Prisma" />
+							<Skills alt="Mongoose Icon" img={mongoose} text="Mongoose" width={50} />
+							<Skills alt="Git Icon" img={git} text="Git" isSize15 />
+						</Stack>
 					</div>
 					<div className="education">
 						<h2>Education</h2>
 						<div className="flex justify-center items-center text-center max-[850px]:flex-col">
-							{educationCard(tup, "Technological University of the Philippines", "Bachelor of Science in Computer Science", "2019 - 2023")}
-							{educationCard(dict, "Department of Information and Communications Technology – Philippines", "Software Engineering", "2018 - 2018")}
-							{educationCard(AMA, "AMA Computer College", "Computer Programming", "2016 - 2018")}
+							{educationCard(tup, "Technological University of the Philippines", "Bachelor of Science in Computer Science", "2019 - 2023", "TUP")}
+							{educationCard(dict, "Department of Information and Communications Technology – Philippines", "Software Engineering", "2018 - 2018", "DICT")}
+							{educationCard(AMA, "AMA Computer College", "Computer Programming", "2016 - 2018", "AMA Computer College")}
 						</div>
 					</div>
 				</div>
