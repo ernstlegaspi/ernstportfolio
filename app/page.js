@@ -7,7 +7,6 @@ import { HiMail } from 'react-icons/hi'
 import Image from 'next/image'
 
 import me from '../img/me.webp'
-import twitterProject from '../img/twitterclone.webp'
 
 import axios from '../img/axios.webp'
 import css from '../img/css.webp'
@@ -33,12 +32,13 @@ import zustand from '../img/zustand.webp'
 import AMA from '../img/ama.webp'
 import dict from '../img/dict.webp'
 import tup from '../img/tup.webp'
+import Projects from '@/components/projects'
 
-// const TwitterClone = lazy(() => import('./twitter-clone/twitter-clone'))
+const TwitterClone = lazy(() => import('@/components/TwitterClone'))
 
 export default function Home() {
 	const [showTwitterClone, setShowTwitterClone] = useState(false)
-
+	
 	const Stack = ({ children }) => <div className="flex justify-center mb-3 max-[850px]:flex-col max-[850px]:items-center max-[850px]:mb-0">
 		{children}
 	</div>
@@ -76,13 +76,7 @@ export default function Home() {
 					<div className="projects">
 						<h2>Recent Projects</h2>
 						<div className="p-row">
-							<div onClick={() => {}} className="project">
-							{/* <div onClick={() => setShowTwitterClone(true)} className="project"> */}
-								<Image className="project-image" alt="Twitter Clone Project" src={twitterProject} priority />
-								<div className="overlay">
-									<p>View project</p>
-								</div>
-							</div>
+							<Projects setShowTwitterClone={setShowTwitterClone} />
 						</div>
 					</div>
 					<div className="stacks">
@@ -128,9 +122,9 @@ export default function Home() {
 						</div>
 					</div>
 				</div>
-				{/* <Suspense fallback={<p>Loading...</p>}>
-					{showTwitterClone ? <TwitterClone showTwitterClone={setShowTwitterClone} /> : null}
-				</Suspense> */}
+				<Suspense fallback={<p>Loading...</p>}>
+					{showTwitterClone ? <TwitterClone setShowTwitterClone={setShowTwitterClone} /> : null}
+				</Suspense>
 			</div>
 		</div>
 	)

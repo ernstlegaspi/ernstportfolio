@@ -25,6 +25,10 @@ h1, h2, .socials-color {
 	border: 1px solid #F29F3E
 }
 
+.bg {
+	background: #f3f3f3
+}
+
 .main-bg {
 	background: url(../img/bg.webp) no-repeat 100% 0%;
 	background-size: cover;
