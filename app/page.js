@@ -64,6 +64,10 @@ export default function Home() {
 							<p>HEY THERE!</p>
 							<h1>I'm Ernst Legaspi</h1>
 							<p>Good day, I am Ernst Legaspi. I have 3 years personal experience and 1 year of work experience in web development using different full stack technologies, I am eager to contribute my skills to your dynamic team and assist in developing cutting-edge applications.</p>
+							<div className="flex items-center">
+								<button className="cursor-default text-sm text-gray-600 mr-1">Download my</button>
+								<button onClick={() => window.location.href="https://ernstportfolio.vercel.app/Legaspi-Resume.pdf"} className="text-sm underline italic text-gray-600">Resume</button>
+							</div>
 							<div className="flex items-center socials-color mt-1 max-[850px]:w-full max-[850px]:justify-center">
 								<a href="https://www.linkedin.com/in/er
 								nst-danielle-legaspi-259547170/" target="_blank" rel="noreferrer"><AiFillGithub className="text-[20px] max-[850px]:text-[40px]" /></a>
