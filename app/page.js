@@ -5,7 +5,6 @@ import Image from 'next/image'
 import { lazy, Suspense, useState } from 'react'
 import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai'
 import { HiMail } from 'react-icons/hi'
-import { saveAs } from 'file-saver'
 
 import me from '../img/me.webp'
 
@@ -65,10 +64,7 @@ export default function Home() {
 							<p>HEY THERE!</p>
 							<h1>I'm Ernst Legaspi</h1>
 							<p>Good day, I am Ernst Legaspi. I have 3 years personal experience and 1 year of work experience in web development using different full stack technologies, I am eager to contribute my skills to your dynamic team and assist in developing cutting-edge applications.</p>
-							<div className="flex items-center">
-								<button className="cursor-default text-sm text-gray-600 mr-1">Download my</button>
-								<button onClick={() => saveAs('https://ernstportfolio.vercel.app/Legaspi-Resume.pdf')} className="text-sm underline italic text-gray-600">Resume</button>
-							</div>
+							<p className="text-sm text-gray-600">Download my <a rel="noreferrer" target="_blank" href="https://drive.google.com/file/d/1MnLm-qCsQ4579zSPyLcslvaO8n1IVsa7/view?usp=sharing" className="text-sm underline text-gray-600 cursor-pointer">Resume</a></p>
 							<div className="flex items-center socials-color mt-1 max-[850px]:w-full max-[850px]:justify-center">
 								<a href="https://www.linkedin.com/in/er
 								nst-danielle-legaspi-259547170/" target="_blank" rel="noreferrer"><AiFillGithub className="text-[20px] max-[850px]:text-[40px]" /></a>
