@@ -1,10 +1,11 @@
 'use client'
 
-import { lazy, Suspense, useState } from 'react'
+import Image from 'next/image'
 
+import { lazy, Suspense, useState } from 'react'
 import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai'
 import { HiMail } from 'react-icons/hi'
-import Image from 'next/image'
+import { saveAs } from 'file-saver'
 
 import me from '../img/me.webp'
 
@@ -66,7 +67,7 @@ export default function Home() {
 							<p>Good day, I am Ernst Legaspi. I have 3 years personal experience and 1 year of work experience in web development using different full stack technologies, I am eager to contribute my skills to your dynamic team and assist in developing cutting-edge applications.</p>
 							<div className="flex items-center">
 								<button className="cursor-default text-sm text-gray-600 mr-1">Download my</button>
-								<button onClick={() => window.location.href="https://ernstportfolio.vercel.app/Legaspi-Resume.pdf"} className="text-sm underline italic text-gray-600">Resume</button>
+								<button onClick={() => saveAs('https://ernstportfolio.vercel.app/Legaspi-Resume.pdf')} className="text-sm underline italic text-gray-600">Resume</button>
 							</div>
 							<div className="flex items-center socials-color mt-1 max-[850px]:w-full max-[850px]:justify-center">
 								<a href="https://www.linkedin.com/in/er
