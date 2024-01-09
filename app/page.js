@@ -63,8 +63,8 @@ export default function Home() {
 						<div className="header-intro">
 							<p>HEY THERE!</p>
 							<h1>I'm Ernst Legaspi</h1>
-							<p>Good day, I am Ernst Legaspi. I have 3 years personal experience and 1 year of work experience in web development using different full stack technologies, I am eager to contribute my skills to your dynamic team and assist in developing cutting-edge applications.</p>
-							<p className="text-sm text-gray-600">Download my <a rel="noreferrer" target="_blank" href="https://drive.google.com/file/d/1MnLm-qCsQ4579zSPyLcslvaO8n1IVsa7/view?usp=sharing" className="text-sm underline text-gray-600 cursor-pointer">Resume</a></p>
+							<p>Good day, I am Ernst Legaspi. I have almost 4 years of personal experience and 3 years of work experience in web development using different full stack technologies, I am eager to contribute my skills to your dynamic team and assist in developing cutting-edge applications.</p>
+							<p className="text-sm text-gray-600">Download my <a rel="noreferrer" target="_blank" href="https://drive.google.com/file/d/1QvP0WNguuD_RB5DMZic99eNX2xty9ZZI/view?usp=sharing" className="text-sm underline text-gray-600 cursor-pointer">Resume</a></p>
 							<div className="flex items-center socials-color mt-1 max-[850px]:w-full max-[850px]:justify-center">
 								<a href="https://www.linkedin.com/in/er
 								nst-danielle-legaspi-259547170/" target="_blank" rel="noreferrer"><AiFillGithub className="text-[20px] max-[850px]:text-[40px]" /></a>
