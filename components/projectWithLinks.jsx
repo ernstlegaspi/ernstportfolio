@@ -1,18 +1,20 @@
 'use client'
 
+import Link from 'next/link'
+
 import Image from 'next/image'
 
 import './components.css'
 
-const Project = ({ onClick, img, alt }) => {
-	return (
-		<div onClick={onClick} className="project mr-3">
+const ProjectWithLinks = ({ link, img, alt }) => {
+	return <div className="project mr-3">
+		<Link href={link}>
 			<Image className="project-image" alt={alt} src={img} priority />
 			<div className="overlay">
 				<p>View project</p>
 			</div>
-		</div>
-	)
+		</Link>
+	</div>
 }
 
-export default Project
+export default ProjectWithLinks
